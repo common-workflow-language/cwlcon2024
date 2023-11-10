@@ -1,0 +1,28 @@
+name: build_and_deploy
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout this repository
+      - uses: actions/checkout@v4
+
+      # Push website to common-workflow-language.github.io/conferences/2024
+      - name: Pushes to another repository
+        id: push_directory
+        uses: cpina/github-action-push-to-another-repository@v1
+        env:
+          SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
+        with:
+          source-directory: common-workflow-language.github.io/
+          destination-github-username: common-workflow-language
+          destination-repository-name: common-workflow-language.github.io
+          user-email: cwl-bot@users.noreply.github.com
+          commit-message: See ORIGIN_COMMIT from ${{ github.ref }}
+          target-branch: master
+          target-directory: conferences/2024
