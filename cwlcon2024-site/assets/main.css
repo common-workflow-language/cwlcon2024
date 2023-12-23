@@ -1,5 +1,125 @@
 /* main.css */
 
+/*
+  We use semantic HTML elements (header, main, footer, etc., https://www.semrush.com/blog/semantic-html5-guide/).
+  This is useful for other developers, SEO, and - more importantly - accessibility.
+  The CSS selectors below modify each semantic component in the order they appear
+  in the page.
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto%7CRoboto+Slab');
+
+/* These are the variables used in this style. Modify these values as needed. */
+:root {
+    --cold-red-font-color: #9F2135;
+    --warm-red-font-color: #D4376B;
+    --gray-color: #C0C0C0;
+    --light-gray-color: #FAFAFA;
+    --font-family: 'Roboto',sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+}
+
+/*
+  The header.
+
+  It contains three columns. On the left we display the logo. In the middle the Conference Name.
+  And on the right hand side we have information about venue and date. The middle column width
+  is dynamic, and stretches to fill.
+*/
+
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: center;
+    background-color: var(--light-gray-color);
+    align-items: stretch;
+    border-bottom: 0.5vw solid var(--warm-red-font-color);
+}
+
+header > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1.5vw;
+}
+
+/* First column and children elements. */
+
+header div:nth-child(1) {
+    width: 25%;
+}
+
+header div:nth-child(1) img {
+    max-width: 100%;
+}
+
+/* Middle column and children elements. */
+
+header div:nth-child(2) {
+    width: 50%;
+}
+
+header div:nth-child(2) h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 6vw;
+    color: var(--warm-red-font-color);
+    text-shadow: var(--gray-color) 1px 1px 3px;
+    padding: 0;
+    margin: 0;
+}
+
+header div:nth-child(2) span:nth-child(2) {
+    font-size:1em;
+    text-shadow: 1px 1px 3px #c0c0c0;
+}
+
+header div:nth-child(2) span:nth-child(3) {
+    font-size:0.67em;
+    color: #B5314C;
+    font-weight: lighter;
+}
+
+/* Third column and children elements. */
+
+header div:nth-child(3) {
+    width: 25%;
+    background-color: var(--warm-red-font-color);
+    align-self: end;
+    overflow: hidden;
+    position: relative;
+}
+
+header div:nth-child(3):before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-width: 0 0 16px 16px;
+    border-style: solid;
+    border-color: var(--light-gray-color) var(--cold-red-font-color) var(--cold-red-font-color) var(--light-gray-color);
+    background: var(--cold-red-font-color);
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+    /* Firefox 3.0 damage limitation */
+    display: block; width: 0;
+}
+
+header div:nth-child(3) > span {
+    margin: 0 auto;
+    padding: 0.25rem 0;
+    display: inline-block;
+    color: white;
+    font-size: 2vw;
+}
+
 /* These are the colors and fonts used throughout the webpage.
  * I've listed them here so that a user may easily
  * do a search-and-replace for these to change the site theme.
@@ -12,30 +132,6 @@
  *   #813c54; Heading color, titles in the Program
  *   #b8860b; Dark Goldenrod, color for links
  */
-
-@import url('https://fonts.googleapis.com/css?family=Roboto%7CRoboto+Slab');
-
-*{
-    border:0;
-    font:inherit;
-    font-size:1rem;
-    margin:0;
-    padding:0;
-    vertical-align:baseline;
-}
-
-body{
-    background-color: #ffffff;
-    background-size: cover;
-    background-attachment: fixed;
-    color: #505050;
-    text-align:left;
-    font-family:'Roboto',sans-serif;
-    font-size:1rem;
-    line-height:1.5rem;
-    margin: 60px auto;
-    width: 1000px;
-}
 
 a{color: #b8860b; text-decoration:none;}
 a.current{color: #52739e;}
@@ -99,9 +195,7 @@ th,td{
 }
 
 /* Conference Title Logo */
-.title1{font-size:1em;color: #B5314C; text-shadow: 1px 1px 3px #c0c0c0;}
-.title2{font-size:1em;color: #B5314C; text-shadow: 1px 1px 3px #c0c0c0;}
-.year{font-size:0.67em;color: #B5314C;font-weight: lighter;}
+
 
 /* Navigation Links (Home, Registration, etc) */
 table.navigation{width:800px;}
