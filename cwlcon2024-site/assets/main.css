@@ -14,6 +14,8 @@
     --cold-red-font-color: #9F2135;
     --warm-red-font-color: #D4376B;
     --gray-color: #C0C0C0;
+    /* This is the same color as the CWL website menu background. */
+    --medium-gray: rgb(244, 244, 244);
     --light-gray-color: #FAFAFA;
     --font-family: 'Roboto',sans-serif;
 }
@@ -127,7 +129,8 @@ header div:nth-child(3) > span {
 
 nav {
     align-items: center;
-    background-color: var(--warm-red-font-color);
+    background-color: var(--medium-gray);
+    border-bottom: 1px solid var(--gray-color);
 }
 
 nav > ol {
@@ -144,22 +147,37 @@ nav > ol > li {
 }
 
 nav > ol > li > a {
-    color: white;
-    font-weight: bold;
+    color: gray;
+    background-color: var(--medium-gray);
+    font-weight: normal;
     text-decoration: none;
     cursor: pointer;
     padding: 1rem 1rem;
     display: block;
-    border-bottom: 0.5vw solid var(--warm-red-font-color);
 }
 
 nav > ol > li > a.current {
-    border-bottom: 0.5vw solid var(--light-gray-color);
+    color: var(--warm-red-font-color);
 }
 
 nav > ol > li > a:hover {
-    background-color: rgba(100%, 100%, 100%, 0.1);
-    border-bottom: 0.5vw solid var(--light-gray-color);
+    color: var(--warm-red-font-color);
+}
+
+/**
+  The main content.
+*/
+
+main {
+
+}
+
+main > article {
+
+}
+
+main > article > section {
+
 }
 
 /* These are the colors and fonts used throughout the webpage.
