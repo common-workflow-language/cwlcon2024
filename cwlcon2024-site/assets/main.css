@@ -69,6 +69,7 @@ header div:nth-child(2) h1 {
     text-align: center;
     font-weight: bold;
     font-size: 6vw;
+    font-family: 'Roboto Slab',serif;
     color: var(--warm-red-font-color);
     text-shadow: var(--gray-color) 1px 1px 3px;
     padding: 0;
@@ -120,6 +121,47 @@ header div:nth-child(3) > span {
     font-size: 2vw;
 }
 
+/*
+  The navigation menu.
+*/
+
+nav {
+    align-items: center;
+    background-color: var(--warm-red-font-color);
+}
+
+nav > ol {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav > ol > li {
+    padding: 0;
+    margin: 0;
+}
+
+nav > ol > li > a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 1rem 1rem;
+    display: block;
+    border-bottom: 0.5vw solid var(--warm-red-font-color);
+}
+
+nav > ol > li > a.current {
+    border-bottom: 0.5vw solid var(--light-gray-color);
+}
+
+nav > ol > li > a:hover {
+    background-color: rgba(100%, 100%, 100%, 0.1);
+    border-bottom: 0.5vw solid var(--light-gray-color);
+}
+
 /* These are the colors and fonts used throughout the webpage.
  * I've listed them here so that a user may easily
  * do a search-and-replace for these to change the site theme.
@@ -133,21 +175,7 @@ header div:nth-child(3) > span {
  *   #b8860b; Dark Goldenrod, color for links
  */
 
-a{color: #b8860b; text-decoration:none;}
-a.current{color: #52739e;}
-a.current:hover{color: #e82945;}
-a:hover{color: #b2132e;}
-a:active{color: #e82945;}
-h1,h2,h3,h4{clear:left; color: #813c54; margin:1.5rem 0 1rem 0; font-family:'Roboto Slab',serif; text-shadow: 1px 1px 2px #d0d0d0;}
-h1{font-size:2.67rem;}
-h2{font-size:2.00rem;}
-h3{font-size:1.67rem;}
-h4{font-size:1.33rem;}
 p{list-style:none; margin:24px auto 24px auto; padding:0; width:900px; text-align:left;}
-li a, p a {text-decoration:underline; text-decoration-color:#b8860b; }
-ul{list-style:none; margin:24px auto 24px auto; padding:0; width:800px; text-align:left;}
-ol{margin:24px auto 24px auto; padding:0; width:800px; text-align:left; line-height: 36px}
-ul li{list-style:none; margin:0 auto 0 auto; padding:0; text-align:left;}
 i,em{font-style:italic;}
 b,strong{font-weight:bold;}
 sup{
