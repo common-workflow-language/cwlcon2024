@@ -81,6 +81,11 @@ header div:nth-child(2) h1 {
     margin: 0;
 }
 
+header div:nth-child(2) > h1 > a {
+    color: inherit;
+    text-decoration: none;
+}
+
 header div:nth-child(2) span:nth-child(2) {
     font-size:1em;
     text-shadow: 1px 1px 3px #c0c0c0;
@@ -173,6 +178,8 @@ nav > ol > li > a:hover {
 
 main {
     display: flex;
+    flex-direction: column;
+    flex-flow: initial;
     align-items: center;
     background-color: white;
 }
@@ -180,6 +187,7 @@ main {
 main > article {
     max-width: 80%;
     margin: 0 auto;
+    flex: 1;
 }
 
 main > article > section {
@@ -198,11 +206,15 @@ main > article > section > p {
     text-align: justify;
 }
 
-main > article > section > ul {
+main > article > section > * > i {
+    font-style: italic;
+}
+
+main > article > section > ul, main > article > section > ol {
     margin: 0.5rem 0 0.5rem 2rem;
 }
 
-main > article > section > ul > li {
+main > article > section > ul > li, main > article > section > ol > li {
     display: list-item;
     list-style: circle;
     margin: 0.75rem 0;
