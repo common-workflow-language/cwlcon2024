@@ -228,7 +228,6 @@ main > article > section > h3 > a:hover:after,
 main > article > section > h4 > a:hover:after{
     content: '\0a\00B6';
     font-weight: normal;
-    font-size: 3vw;
     opacity: 0.8;
 }
 
