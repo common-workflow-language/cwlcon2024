@@ -132,7 +132,7 @@ nav > ol > li {
 }
 
 nav > ol > li > a {
-    color: gray;
+    color: rgb(128, 128, 128);
     background-color: var(--medium-gray);
     font-weight: normal;
     text-decoration: none;
@@ -274,7 +274,7 @@ footer {
     margin: auto 0 0 0;
     padding: 2rem 0;
     align-items: center;
-    color: gray;
+    color: rgb(128, 128, 128);
     background-color: var(--light-gray-color);
 }
 
@@ -311,7 +311,7 @@ footer ol > li:last-child::after, footer ul > li:last-child::after {
 }
 
 footer a, footer a:active, footer a:visited {
-    color: gray;
+    color: rgb(128, 128, 128);
 }
 
 footer p > a:hover {
@@ -517,4 +517,57 @@ main > article .banner-text {
         /* -1rem to compensate for gutters and padding. */
         flex: 0 0 calc(33.333% - 1rem);
     }
+}
+
+/*
+For the program tables
+ */
+
+.tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.tg td {
+    border-color: #c0c0c0;
+    border-style: solid;
+    border-width: 1px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    overflow: hidden;
+    padding: 10px 5px;
+    word-break: normal;
+}
+
+.tg th {
+    border-color: #c0c0c0;
+    border-style: solid;
+    border-width: 1px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    overflow: hidden;
+    padding: 10px 5px;
+    word-break: normal;
+}
+
+.tg .tg-f7v4 {
+    background-color: #c0c0c0;
+    border-color: #000000;
+    text-align: left;
+    vertical-align: top
+}
+
+.tg .tg-73oq {
+    border-color: #000000;
+    text-align: left;
+    vertical-align: top
+}
+
+.tg .tg-zefg {
+    background-color: #c0c0c0;
+    border-color: #000000;
+    color: #000000;
+    text-align: left;
+    vertical-align: top
 }
