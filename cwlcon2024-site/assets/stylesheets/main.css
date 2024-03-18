@@ -276,6 +276,12 @@ main > article > section address {
     margin: 0.5rem 0;
 }
 
+main > article > section #program-week-1 h2,
+main > article > section #program-week-2 h2 {
+    padding-bottom: .5rem;
+    border-bottom: 0.5vw solid var(--warm-red-font-color);
+}
+
 /* Submission button */
 /* Ref: https://uiverse.io/adamgiebl/smart-moth-68, by adamgiebl, MIT License */
 a.btn {
@@ -421,18 +427,18 @@ strong {
 }
 
 /* A fake title for when we need to emphasize, but do not need a new Heading. */
-.faketitle {
+.fake-title {
     color: var(--warm-red-font-color);
     font-weight: bold;
     font-size: 1.5rem;
 }
 
-.faketitle > a {
+.fake-title > a {
     color: inherit;
     text-decoration: none;
 }
 
-.faketitle > a:hover:after{
+.fake-title > a:hover:after{
     content: '\0a\00B6';
     font-weight: normal;
     opacity: 0.8;
